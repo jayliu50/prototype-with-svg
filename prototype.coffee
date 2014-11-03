@@ -12,10 +12,13 @@ class @Prototype
     Prototype.gotoState initialState
 
   init = (state)->
-    {view, clear, hide, triggers} = state
+    {view, clear, hide, triggers, initialize} = state
 
     _.each clear, (selector) ->
-      Prototype.setText selector, ""
+      Prototype.clearText selector
+
+    _.each initialize, (text, selector) ->
+      Prototype.setText selector, text
 
     _.each triggers, (value, key) ->
       # todo: should probably check to see that each value is a function
@@ -33,11 +36,15 @@ class @Prototype
   Static Methods
   ###
   @setText: (selector, text) ->
+    text = '&nbsp' if !text? || text == "" # never let the string go to the empty string because the text will get reflowed
     element = $("##{selector}")[0]
     if element?
       element.innerHTML = text
     else
       console.warn "setText: there is no id #{selector}"
+
+  @clearText = (selector) ->
+    Prototype.setText selector, '&nbsp;' # because empty string seems to permit the browser to do weird stuff with the layout
 
   @hide: (selector) ->
     $("##{selector}").css 'visibility', 'hidden'    # should probably check for existence first
