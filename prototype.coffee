@@ -7,17 +7,21 @@ class @Prototype
   hide = []
 
   constructor: (setup) ->
-    {initialState, states, triggers, clear, hide} = setup
+    {initialState, states} = setup
 
     Prototype.gotoState initialState
 
-  init = ->
+  init = (state)->
+    {view, clear, hide, triggers} = state
+
     _.each clear, (selector) ->
       Prototype.setText selector, ""
 
     _.each triggers, (value, key) ->
       # todo: should probably check to see that each value is a function
-      $("##{key}").on "click", value
+      $("##{key}")
+        .on "click", value
+        .css 'cursor', 'pointer'
       return
 
     _.each hide, (selector) ->
@@ -29,7 +33,11 @@ class @Prototype
   Static Methods
   ###
   @setText: (selector, text) ->
-    $("##{selector}")[0].innerHTML = text # should probably check for existence first
+    element = $("##{selector}")[0]
+    if element?
+      element.innerHTML = text
+    else
+      console.warn "setText: there is no id #{selector}"
 
   @hide: (selector) ->
     $("##{selector}").css 'visibility', 'hidden'    # should probably check for existence first
@@ -38,8 +46,11 @@ class @Prototype
     $("##{selector}").css 'visibility', 'visible'   # should probably check for existence first
 
   @gotoState: (state) ->
-    $.get "views/#{states[state]}", (data) ->
+    $.get "views/#{states[state].view}", (data) ->
       $(document.body).empty()
       $(document.body).append data.documentElement
-      init()
+      init(states[state])
+      Prototype.currentState = state
       return
+
+  @currentState: null
