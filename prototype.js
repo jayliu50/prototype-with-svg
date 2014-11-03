@@ -41,6 +41,9 @@ this.Prototype = (function() {
 
   Prototype.setText = function(selector, text) {
     var element;
+    if ((text == null) || text === "") {
+      text = '&nbsp';
+    }
     element = $("#" + selector)[0];
     if (element != null) {
       return element.innerHTML = text;
@@ -50,7 +53,7 @@ this.Prototype = (function() {
   };
 
   Prototype.clearText = function(selector) {
-    return Prototype.setText(selector, '&nbsp;');
+    return Prototype.setText(selector, '');
   };
 
   Prototype.hide = function(selector) {

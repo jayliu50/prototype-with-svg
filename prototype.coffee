@@ -38,13 +38,14 @@ class @Prototype
   @setText: (selector, text) ->
     text = '&nbsp' if !text? || text == "" # never let the string go to the empty string because the text will get reflowed
     element = $("##{selector}")[0]
+
     if element?
       element.innerHTML = text
     else
       console.warn "setText: there is no id #{selector}"
 
   @clearText = (selector) ->
-    Prototype.setText selector, '&nbsp;' # because empty string seems to permit the browser to do weird stuff with the layout
+    Prototype.setText selector, ''
 
   @hide: (selector) ->
     $("##{selector}").css 'visibility', 'hidden'    # should probably check for existence first

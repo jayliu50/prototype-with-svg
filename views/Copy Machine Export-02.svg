@@ -108,42 +108,43 @@
 </font>
 
 	<g id="Single">
-	<rect x="5.3" y="9.5" fill="none" width="63" height="6.3"/>
-	<text id="text-mode" transform="matrix(1 0 0 1 5.25 13.7002)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Single Sheet</text>
-	<text id="text-start" transform="matrix(1 0 0 1 302.9346 129.5)" font-family="'Norwester-Regular'" font-size="14">Start</text>
-	<text transform="matrix(1 0 0 1 87.8438 12.5)" font-family="'Norwester-Regular'" font-size="10">Reset All</text>
+	<rect x="324.3" y="23.5" fill="none" width="63" height="6.3"/>
+	
+		<text id="text-mode" transform="matrix(1 0 0 1 340.2168 27.7002)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Single Sheet Mode</text>
+	<text id="text-start_1_" transform="matrix(1 0 0 1 331.9346 178.5)" font-family="'Norwester-Regular'" font-size="14">Start</text>
+	<text transform="matrix(1 0 0 1 3.8438 12.5)" font-family="'Norwester-Regular'" font-size="10">Reset All</text>
 	<text id="Log_Out" transform="matrix(1 0 0 1 360.8438 12.5)" font-family="'Norwester-Regular'" font-size="10">Log Out</text>
 	<g>
 		<g>
-			<rect x="5.3" y="41.3" fill="none" width="63" height="6.3"/>
-			<text transform="matrix(1 0 0 1 5.25 45.5254)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Tray</text>
-			<text id="text-tray" transform="matrix(1 0 0 1 23.75 58.9502)" font-family="'Norwester-Regular'" font-size="12">Tray A 8.5 × 11</text>
+			<rect x="5.3" y="30.3" fill="none" width="63" height="6.3"/>
+			<text transform="matrix(1 0 0 1 5.25 34.5254)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Tray</text>
+			<text id="text-tray" transform="matrix(1 0 0 1 23.75 47.9502)" font-family="'Norwester-Regular'" font-size="12">Tray A 8.5 × 11</text>
 		</g>
-		<path d="M14.5,52.3c0.3-0.3,0.7-0.3,1,0c0.3,0.3,0.3,0.7,0,1l-3.9,3.8c-0.3,0.3-0.7,0.3-1,0l-3.9-3.8c-0.3-0.3-0.3-0.7,0-1
-			s0.7-0.3,1,0l3.4,3.1L14.5,52.3z"/>
+		<path d="M14.5,41.3c0.3-0.3,0.7-0.3,1,0c0.3,0.3,0.3,0.7,0,1l-3.9,3.8c-0.3,0.3-0.7,0.3-1,0l-3.9-3.8c-0.3-0.3-0.3-0.7,0-1
+			s0.7-0.3,1,0l3.4,3.1L14.5,41.3z"/>
 	</g>
 	<g>
-		<rect x="5.3" y="68.9" fill="none" width="63" height="6.3"/>
-		<text transform="matrix(1 0 0 1 5.25 73.1182)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Scale</text>
-		<text id="text-scale" transform="matrix(1 0 0 1 23.75 86.543)" font-family="'Norwester-Regular'" font-size="12">100%</text>
-		<path d="M14.5,79.9c0.3-0.3,0.7-0.3,1,0c0.3,0.3,0.3,0.7,0,1l-3.9,3.8c-0.3,0.3-0.7,0.3-1,0l-3.9-3.8c-0.3-0.3-0.3-0.7,0-1
-			s0.7-0.3,1,0l3.4,3.1L14.5,79.9z"/>
-		<path d="M104.7,84.7c-0.3,0.3-0.7,0.3-1,0c-0.3-0.3-0.3-0.7,0-1l3.9-3.8c0.3-0.3,0.7-0.3,1,0l3.9,3.8c0.3,0.3,0.3,0.7,0,1
-			c-0.3,0.3-0.7,0.3-1,0l-3.4-3.1L104.7,84.7z"/>
+		<rect x="5.3" y="57.9" fill="none" width="63" height="6.3"/>
+		<text transform="matrix(1 0 0 1 5.25 62.1182)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Scale</text>
+		<text id="text-scale" transform="matrix(1 0 0 1 23.75 75.543)" font-family="'Norwester-Regular'" font-size="12">100%</text>
+		<path d="M14.5,68.9c0.3-0.3,0.7-0.3,1,0c0.3,0.3,0.3,0.7,0,1l-3.9,3.8c-0.3,0.3-0.7,0.3-1,0l-3.9-3.8c-0.3-0.3-0.3-0.7,0-1
+			s0.7-0.3,1,0l3.4,3.1L14.5,68.9z"/>
+		<path d="M104.7,73.7c-0.3,0.3-0.7,0.3-1,0c-0.3-0.3-0.3-0.7,0-1l3.9-3.8c0.3-0.3,0.7-0.3,1,0l3.9,3.8c0.3,0.3,0.3,0.7,0,1
+			c-0.3,0.3-0.7,0.3-1,0l-3.4-3.1L104.7,73.7z"/>
 	</g>
 	<g>
-		<rect x="5.3" y="96.5" fill="none" width="63" height="6.3"/>
-		<text transform="matrix(1 0 0 1 5.25 100.7109)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Darkness</text>
-		<text id="text-darkness" transform="matrix(1 0 0 1 23.75 114.1348)" font-family="'Norwester-Regular'" font-size="12">Normal</text>
-		<path d="M14.5,107.5c0.3-0.3,0.7-0.3,1,0c0.3,0.3,0.3,0.7,0,1l-3.9,3.8c-0.3,0.3-0.7,0.3-1,0l-3.9-3.8c-0.3-0.3-0.3-0.7,0-1
-			s0.7-0.3,1,0l3.4,3.1L14.5,107.5z"/>
+		<rect x="5.3" y="85.5" fill="none" width="63" height="6.3"/>
+		<text transform="matrix(1 0 0 1 5.25 89.7109)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Darkness</text>
+		<text id="text-darkness" transform="matrix(1 0 0 1 23.75 103.1348)" font-family="'Norwester-Regular'" font-size="12">Normal</text>
+		<path d="M14.5,96.5c0.3-0.3,0.7-0.3,1,0c0.3,0.3,0.3,0.7,0,1l-3.9,3.8c-0.3,0.3-0.7,0.3-1,0l-3.9-3.8c-0.3-0.3-0.3-0.7,0-1
+			s0.7-0.3,1,0l3.4,3.1L14.5,96.5z"/>
 	</g>
 	<g>
-		<rect x="5.3" y="124.1" fill="none" width="63" height="6.3"/>
-		<text transform="matrix(1 0 0 1 5.25 128.3027)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Sides</text>
-		<text id="text-sides" transform="matrix(1 0 0 1 23.75 141.7285)" font-family="'Norwester-Regular'" font-size="12">Single Sided</text>
-		<path d="M14.5,135.1c0.3-0.3,0.7-0.3,1,0c0.3,0.3,0.3,0.7,0,1l-3.9,3.8c-0.3,0.3-0.7,0.3-1,0l-3.9-3.8c-0.3-0.3-0.3-0.7,0-1
-			s0.7-0.3,1,0l3.4,3.1L14.5,135.1z"/>
+		<rect x="5.3" y="113.1" fill="none" width="63" height="6.3"/>
+		<text transform="matrix(1 0 0 1 5.25 117.3027)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Sides</text>
+		<text id="text-sides" transform="matrix(1 0 0 1 23.75 130.7285)" font-family="'Norwester-Regular'" font-size="12">Single Sided</text>
+		<path d="M14.5,124.1c0.3-0.3,0.7-0.3,1,0c0.3,0.3,0.3,0.7,0,1l-3.9,3.8c-0.3,0.3-0.7,0.3-1,0l-3.9-3.8c-0.3-0.3-0.3-0.7,0-1
+			s0.7-0.3,1,0l3.4,3.1L14.5,124.1z"/>
 	</g>
 	<g id="numpad">
 		<g>
@@ -237,182 +238,178 @@
 		<rect id="numback_1_" x="157.1" y="159.2" opacity="0" fill="#FFFFFF" width="25" height="26"/>
 		<rect x="181.6" y="32.3" fill="none" width="35.7" height="30.9"/>
 		<text id="text-copies-count" transform="matrix(1 0 0 1 182.4512 56.1074)" font-family="'Norwester-Regular'" font-size="34">50</text>
-		<g id="text-time-remaining">
-			<rect x="269.5" y="166.5" fill="none" width="100.2" height="22.2"/>
-			<text transform="matrix(1 0 0 1 277.4238 173.5)" fill="#999999" font-family="'Norwester-Regular'" font-size="10">Time Remaining: 0:15</text>
-		</g>
-		<g id="text-sheets-required">
-			<rect x="268.6" y="146.4" fill="none" width="100.2" height="11.1"/>
-			<text transform="matrix(1 0 0 1 277.4248 153.4229)" fill="#999999" font-family="'Norwester-Regular'" font-size="10">Sheets Required: 15</text>
-		</g>
 	</g>
 	<g id="toggle-at-single">
 		<g>
-			<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M54.5,19.5c0-1.7-1.3-3-3-3h-40c-1.7,0-3,1.3-3,3v14
-				c0,1.7,1.3,3,3,3h40c1.7,0,3-1.3,3-3V19.5z"/>
+			<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M386.5,33.5c0-1.7-1.3-3-3-3h-69c-1.7,0-3,1.3-3,3v26
+				c0,1.7,1.3,3,3,3h69c1.7,0,3-1.3,3-3V33.5z"/>
 		</g>
 		<g>
-			<path fill="#E6E6E6" d="M33,19c0-1.7-1.3-3-3-3H12c-1.7,0-3,1.3-3,3v14c0,1.7,1.3,3,3,3h18c1.7,0,3-1.3,3-3V19z"/>
-			<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M32.5,19.5c0-1.7-1.3-3-3-3h-18c-1.7,0-3,1.3-3,3v14
-				c0,1.7,1.3,3,3,3h18c1.7,0,3-1.3,3-3V19.5z"/>
+			<path fill="#E6E6E6" d="M350,33c0-1.7-1.3-3-3-3h-32c-1.7,0-3,1.3-3,3v26c0,1.7,1.3,3,3,3h32c1.7,0,3-1.3,3-3V33z"/>
+			<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M349.5,33.5c0-1.7-1.3-3-3-3h-32c-1.7,0-3,1.3-3,3v26
+				c0,1.7,1.3,3,3,3h32c1.7,0,3-1.3,3-3V33.5z"/>
 		</g>
-		<path d="M18.1,23.3h3v1h-3V23.3z M18.1,24.8h4.5v0.5h-4.5V24.8z M18.1,25.8h4.5v0.5h-4.5V25.8z M18.1,26.8h4.5v0.5h-4.5V26.8z
-			 M18.1,27.8h1.5v0.5h-1.5V27.8z M22.8,20.8h-6.7v10.5h8.5v-8.7L22.8,20.8z M23.6,23v0.3h-1.5v-1.5h0.3L23.6,23z M17.1,30.3v-8.5
-			h4.5v2h2v6.5H17.1z"/>
-		<path fill="#999999" d="M40.3,20.1v1.5h-1.5v10.5h8.5v-1.5h1.5V20.1H40.3z M46.3,31.1h-6.5v-8.5h0.5v8h6V31.1z M47.7,29.6h-6.5
-			v-8.5h6.5V29.6z M45.2,22.6h-3v1h3V22.6z M46.8,24.1h-4.5v0.5h4.5V24.1z M46.8,25.1h-4.5v0.5h4.5V25.1z M46.8,26.1h-4.5v0.5h4.5
-			V26.1z M43.8,27.1h-1.5v0.5h1.5V27.1z"/>
+		<path d="M326.3,41.8h4.8v1.6h-4.8V41.8z M326.3,44.2h7.2V45h-7.2V44.2z M326.3,45.8h7.2v0.8h-7.2V45.8z M326.3,47.4h7.2v0.8h-7.2
+			V47.4z M326.3,49h2.4v0.8h-2.4V49z M333.9,37.8h-10.8v16.9h13.7V40.6L333.9,37.8z M335.2,41.3v0.5h-2.4v-2.4h0.5L335.2,41.3z
+			 M324.7,53.1V39.4h7.3v3.2h3.2v10.5H324.7z"/>
+		<path fill="#999999" d="M362,36.5V39h-2.4v16.9h13.7v-2.4h2.4V36.5H362z M371.6,54.3h-10.5V40.6h0.8v12.9h9.7V54.3z M374,51.8
+			h-10.5V38.2H374V51.8z M370,40.6h-4.8v1.6h4.8V40.6z M372.4,43h-7.2v0.8h7.2V43z M372.4,44.6h-7.2v0.8h7.2V44.6z M372.4,46.2h-7.2
+			V47h7.2V46.2z M367.6,47.8h-2.4v0.8h2.4V47.8z"/>
 	</g>
-	<path d="M104.7,56.7c-0.3,0.3-0.7,0.3-1,0c-0.3-0.3-0.3-0.7,0-1l3.9-3.8c0.3-0.3,0.7-0.3,1,0l3.9,3.8c0.3,0.3,0.3,0.7,0,1
-		c-0.3,0.3-0.7,0.3-1,0l-3.4-3.1L104.7,56.7z"/>
-	<path d="M104.7,111.7c-0.3,0.3-0.7,0.3-1,0c-0.3-0.3-0.3-0.7,0-1l3.9-3.8c0.3-0.3,0.7-0.3,1,0l3.9,3.8c0.3,0.3,0.3,0.7,0,1
-		c-0.3,0.3-0.7,0.3-1,0l-3.4-3.1L104.7,111.7z"/>
-	<path d="M104.7,138.7c-0.3,0.3-0.7,0.3-1,0c-0.3-0.3-0.3-0.7,0-1l3.9-3.8c0.3-0.3,0.7-0.3,1,0l3.9,3.8c0.3,0.3,0.3,0.7,0,1
-		c-0.3,0.3-0.7,0.3-1,0l-3.4-3.1L104.7,138.7z"/>
+	<path d="M104.7,45.7c-0.3,0.3-0.7,0.3-1,0c-0.3-0.3-0.3-0.7,0-1l3.9-3.8c0.3-0.3,0.7-0.3,1,0l3.9,3.8c0.3,0.3,0.3,0.7,0,1
+		c-0.3,0.3-0.7,0.3-1,0l-3.4-3.1L104.7,45.7z"/>
+	<path d="M104.7,100.7c-0.3,0.3-0.7,0.3-1,0c-0.3-0.3-0.3-0.7,0-1l3.9-3.8c0.3-0.3,0.7-0.3,1,0l3.9,3.8c0.3,0.3,0.3,0.7,0,1
+		c-0.3,0.3-0.7,0.3-1,0l-3.4-3.1L104.7,100.7z"/>
+	<path d="M104.7,127.7c-0.3,0.3-0.7,0.3-1,0c-0.3-0.3-0.3-0.7,0-1l3.9-3.8c0.3-0.3,0.7-0.3,1,0l3.9,3.8c0.3,0.3,0.3,0.7,0,1
+		c-0.3,0.3-0.7,0.3-1,0l-3.4-3.1L104.7,127.7z"/>
 	<g>
 		<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M396.5,19.5c0-1.7-1.3-3-3-3h-256c-1.7,0-3,1.3-3,3v173
 			c0,1.7,1.3,3,3,3h256c1.7,0,3-1.3,3-3V19.5z"/>
 	</g>
 	<g>
-		<path fill="none" stroke="#4D4D4D" stroke-miterlimit="10" d="M357.5,114.5c0-1.7-1.3-3-3-3h-69c-1.7,0-3,1.3-3,3v19
-			c0,1.7,1.3,3,3,3h69c1.7,0,3-1.3,3-3V114.5z"/>
+		<path fill="none" stroke="#4D4D4D" stroke-miterlimit="10" d="M386.5,163.5c0-1.7-1.3-3-3-3h-69c-1.7,0-3,1.3-3,3v19
+			c0,1.7,1.3,3,3,3h69c1.7,0,3-1.3,3-3V163.5z"/>
 	</g>
+	
+		<text id="text-sheets-required" transform="matrix(1 0 0 1 288 113.8252)" fill="#999999" font-family="'Norwester-Regular'" font-size="10">Sheets Required</text>
+	
+		<text id="text-time-remaining" transform="matrix(1 0 0 1 288 126.1738)" fill="#999999" font-family="'Norwester-Regular'" font-size="10">Time Remaining</text>
 </g>
 <g id="Packet">
-	<path d="M104.7,194.7c-0.3,0.3-0.7,0.3-1,0c-0.3-0.3-0.3-0.7,0-1l3.9-3.8c0.3-0.3,0.7-0.3,1,0l3.9,3.8c0.3,0.3,0.3,0.7,0,1
-		c-0.3,0.3-0.7,0.3-1,0l-3.4-3.1L104.7,194.7z"/>
-	<text transform="matrix(1 0 0 1 285.4717 129.5)" font-family="'Norwester-Regular'" font-size="12">Finish Packet</text>
-	<g id="toggle-at-packet">
+	<path d="M104.7,183.7c-0.3,0.3-0.7,0.3-1,0c-0.3-0.3-0.3-0.7,0-1l3.9-3.8c0.3-0.3,0.7-0.3,1,0l3.9,3.8c0.3,0.3,0.3,0.7,0,1
+		c-0.3,0.3-0.7,0.3-1,0l-3.4-3.1L104.7,183.7z"/>
+	<text transform="matrix(1 0 0 1 314.4717 178.5)" font-family="'Norwester-Regular'" font-size="12">Finish Packet</text>
+	<g id="toggle-at-packet_2_">
 		<g>
-			<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M54.5,19.5c0-1.7-1.3-3-3-3h-40c-1.7,0-3,1.3-3,3v14
-				c0,1.7,1.3,3,3,3h40c1.7,0,3-1.3,3-3V19.5z"/>
+			<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M386.5,33.5c0-1.7-1.3-3-3-3h-69c-1.7,0-3,1.3-3,3v26
+				c0,1.7,1.3,3,3,3h69c1.7,0,3-1.3,3-3V33.5z"/>
 		</g>
 		<g>
-			<path fill="#E6E6E6" d="M55,19c0-1.7-1.3-3-3-3H35c-1.7,0-3,1.3-3,3v14c0,1.7,1.3,3,3,3h17c1.7,0,3-1.3,3-3V19z"/>
-			<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M54.5,19.5c0-1.7-1.3-3-3-3h-17c-1.7,0-3,1.3-3,3v14
-				c0,1.7,1.3,3,3,3h17c1.7,0,3-1.3,3-3V19.5z"/>
+			<path fill="#E6E6E6" d="M387,33c0-1.7-1.3-3-3-3h-32c-1.7,0-3,1.3-3,3v26c0,1.7,1.3,3,3,3h32c1.7,0,3-1.3,3-3V33z"/>
+			<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M386.5,33.5c0-1.7-1.3-3-3-3h-32c-1.7,0-3,1.3-3,3v26
+				c0,1.7,1.3,3,3,3h32c1.7,0,3-1.3,3-3V33.5z"/>
 		</g>
-		<path fill="#999999" d="M18.1,23.3h3v1h-3V23.3z M18.1,24.8h4.5v0.5h-4.5V24.8z M18.1,25.8h4.5v0.5h-4.5V25.8z M18.1,26.8h4.5v0.5
-			h-4.5V26.8z M18.1,27.8h1.5v0.5h-1.5V27.8z M22.8,20.8h-6.7v10.5h8.5v-8.7L22.8,20.8z M23.6,23v0.3h-1.5v-1.5h0.3L23.6,23z
-			 M17.1,30.3v-8.5h4.5v2h2v6.5H17.1z"/>
-		<path d="M40.3,20.1v1.5h-1.5v10.5h8.5v-1.5h1.5V20.1H40.3z M46.3,31.1h-6.5v-8.5h0.5v8h6V31.1z M47.7,29.6h-6.5v-8.5h6.5V29.6z
-			 M45.2,22.6h-3v1h3V22.6z M46.8,24.1h-4.5v0.5h4.5V24.1z M46.8,25.1h-4.5v0.5h4.5V25.1z M46.8,26.1h-4.5v0.5h4.5V26.1z M43.8,27.1
-			h-1.5v0.5h1.5V27.1z"/>
+		<path fill="#999999" d="M326.3,41.8h4.8v1.6h-4.8V41.8z M326.3,44.2h7.2V45h-7.2V44.2z M326.3,45.8h7.2v0.8h-7.2V45.8z
+			 M326.3,47.4h7.2v0.8h-7.2V47.4z M326.3,49h2.4v0.8h-2.4V49z M333.9,37.8h-10.8v16.9h13.7V40.6L333.9,37.8z M335.2,41.3v0.5h-2.4
+			v-2.4h0.5L335.2,41.3z M324.7,53.1V39.4h7.3v3.2h3.2v10.5H324.7z"/>
+		<path d="M362,36.5V39h-2.4v16.9h13.7v-2.4h2.4V36.5H362z M371.6,54.3h-10.5V40.6h0.8v12.9h9.7V54.3z M374,51.8h-10.5V38.2H374
+			V51.8z M370,40.6h-4.8v1.6h4.8V40.6z M372.4,43h-7.2v0.8h7.2V43z M372.4,44.6h-7.2v0.8h7.2V44.6z M372.4,46.2h-7.2V47h7.2V46.2z
+			 M367.6,47.8h-2.4v0.8h2.4V47.8z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 288.207 100.5)" font-family="'Norwester-Regular'" font-size="14">Copy Side 1</text>
+	<text transform="matrix(1 0 0 1 318.9424 149.5)" font-family="'Norwester-Regular'" font-size="14">Copy Page</text>
 	<g>
-		<path fill="none" stroke="#4D4D4D" stroke-miterlimit="10" d="M357.5,85.5c0-1.7-1.3-3-3-3h-69c-1.7,0-3,1.3-3,3v19
-			c0,1.7,1.3,3,3,3h69c1.7,0,3-1.3,3-3V85.5z"/>
+		<path fill="none" stroke="#4D4D4D" stroke-miterlimit="10" d="M386.5,134.5c0-1.7-1.3-3-3-3h-69c-1.7,0-3,1.3-3,3v19
+			c0,1.7,1.3,3,3,3h69c1.7,0,3-1.3,3-3V134.5z"/>
 	</g>
 	<g id="toggle-at-feeder">
 		<g>
 			<g>
-				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M388.5,41.5c0-1.7-1.3-3-3-3h-110c-1.7,0-3,1.3-3,3v9
-					c0,1.7,1.3,3,3,3h110c1.7,0,3-1.3,3-3V41.5z"/>
+				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M387.5,80.5c0-1.7-1.3-3-3-3h-110c-1.7,0-3,1.3-3,3v9
+					c0,1.7,1.3,3,3,3h110c1.7,0,3-1.3,3-3V80.5z"/>
 			</g>
 			<g>
-				<path fill="#E6E6E6" d="M389,41c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V41z"/>
-				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M388.5,41.5c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9
-					c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V41.5z"/>
+				<path fill="#E6E6E6" d="M388,80c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V80z"/>
+				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M387.5,80.5c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9
+					c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V80.5z"/>
 			</g>
 		</g>
-		<rect x="330.8" y="43.2" fill="none" width="59.4" height="9.2"/>
-		<text transform="matrix(1 0 0 1 345.3008 50.2666)" font-family="'Norwester-Regular'" font-size="10.1503">Feeder</text>
+		<rect x="329.8" y="82.2" fill="none" width="59.4" height="9.2"/>
+		<text transform="matrix(1 0 0 1 344.3008 89.2666)" font-family="'Norwester-Regular'" font-size="10.1503">Feeder</text>
 		<g>
-			<rect x="272.5" y="43.2" fill="none" width="57.3" height="9.2"/>
-			<text transform="matrix(1 0 0 1 281.9287 50.2666)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.1503">Copy Bed</text>
+			<rect x="271.5" y="82.2" fill="none" width="57.3" height="9.2"/>
+			<text transform="matrix(1 0 0 1 280.9287 89.2666)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.1503">Copy Bed</text>
 		</g>
 	</g>
-	<g id="toggle-at-collate-no">
+	<g id="toggle-at-collate-no_2_">
 		<g>
 			<g>
-				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M121.5,162.5c0-1.7-1.3-3-3-3H8.5c-1.7,0-3,1.3-3,3v9
-					c0,1.7,1.3,3,3,3h110c1.7,0,3-1.3,3-3V162.5z"/>
+				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M121.5,151.5c0-1.7-1.3-3-3-3H8.5c-1.7,0-3,1.3-3,3v9
+					c0,1.7,1.3,3,3,3h110c1.7,0,3-1.3,3-3V151.5z"/>
 			</g>
 			<g>
-				<path fill="#E6E6E6" d="M122,162c0-1.7-1.3-3-3-3H66c-1.7,0-3,1.3-3,3v9c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V162z"/>
-				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M121.5,162.5c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9
-					c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V162.5z"/>
+				<path fill="#E6E6E6" d="M122,151c0-1.7-1.3-3-3-3H66c-1.7,0-3,1.3-3,3v9c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V151z"/>
+				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M121.5,151.5c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9
+					c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V151.5z"/>
 			</g>
 		</g>
-		<rect x="63.8" y="164.2" fill="none" width="59.4" height="9.2"/>
-		<text transform="matrix(1 0 0 1 88.2988 171.2666)" font-family="'Norwester-Regular'" font-size="10.1503">No</text>
+		<rect x="63.8" y="153.2" fill="none" width="59.4" height="9.2"/>
+		<text transform="matrix(1 0 0 1 88.2988 160.2666)" font-family="'Norwester-Regular'" font-size="10.1503">No</text>
 		<g>
-			<rect x="5.5" y="164.2" fill="none" width="57.3" height="9.2"/>
-			<text transform="matrix(1 0 0 1 26.2568 171.2666)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.1503">Yes</text>
+			<rect x="5.5" y="153.2" fill="none" width="57.3" height="9.2"/>
+			<text transform="matrix(1 0 0 1 26.2568 160.2666)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.1503">Yes</text>
 		</g>
 	</g>
-	<rect x="272.5" y="30.5" fill="none" width="63" height="6.3"/>
-	<text transform="matrix(1 0 0 1 272.4541 34.7002)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Load From</text>
-	<rect x="5.3" y="151.7" fill="none" width="63" height="6.3"/>
-	<text transform="matrix(1 0 0 1 5.25 155.8955)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Collate</text>
+	<rect x="324.5" y="69.5" fill="none" width="63" height="6.3"/>
+	<text transform="matrix(1 0 0 1 360.5918 73.7002)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Load From</text>
+	<rect x="5.3" y="140.7" fill="none" width="63" height="6.3"/>
+	<text transform="matrix(1 0 0 1 5.25 144.8955)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Collate</text>
 	<g>
-		<rect x="5.3" y="179.3" fill="none" width="63" height="6.3"/>
-		<text transform="matrix(1 0 0 1 5.25 183.4883)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Staple</text>
-		<path d="M14.5,190.3c0.3-0.3,0.7-0.3,1,0c0.3,0.3,0.3,0.7,0,1l-3.9,3.8c-0.3,0.3-0.7,0.3-1,0l-3.9-3.8c-0.3-0.3-0.3-0.7,0-1
-			s0.7-0.3,1,0l3.4,3.1L14.5,190.3z"/>
-		<text id="text-staple" transform="matrix(1 0 0 1 23.75 196.9131)" font-family="'Norwester-Regular'" font-size="12">None</text>
+		<rect x="5.3" y="168.3" fill="none" width="63" height="6.3"/>
+		<text transform="matrix(1 0 0 1 5.25 172.4883)" fill="#999999" font-family="'Norwester-Regular'" font-size="6">Staple</text>
+		<path d="M14.5,179.3c0.3-0.3,0.7-0.3,1,0c0.3,0.3,0.3,0.7,0,1l-3.9,3.8c-0.3,0.3-0.7,0.3-1,0l-3.9-3.8c-0.3-0.3-0.3-0.7,0-1
+			s0.7-0.3,1,0l3.4,3.1L14.5,179.3z"/>
+		<text id="text-staple_2_" transform="matrix(1 0 0 1 23.75 185.9131)" font-family="'Norwester-Regular'" font-size="12">None</text>
 	</g>
 	<g id="toggle-at-copybed">
 		<g>
 			<g>
-				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M388.5,41.5c0-1.7-1.3-3-3-3h-110c-1.7,0-3,1.3-3,3v9
-					c0,1.7,1.3,3,3,3h110c1.7,0,3-1.3,3-3V41.5z"/>
+				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M387.5,80.5c0-1.7-1.3-3-3-3h-110c-1.7,0-3,1.3-3,3v9
+					c0,1.7,1.3,3,3,3h110c1.7,0,3-1.3,3-3V80.5z"/>
 			</g>
 			<g>
-				<path fill="#E6E6E6" d="M331,41c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V41z"/>
-				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M331.5,41.5c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9
-					c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V41.5z"/>
+				<path fill="#E6E6E6" d="M330,80c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V80z"/>
+				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M330.5,80.5c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9
+					c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V80.5z"/>
 			</g>
 		</g>
-		<rect x="330.8" y="43.2" fill="none" width="59.4" height="9.2"/>
-		<text transform="matrix(1 0 0 1 345.3008 50.2666)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.1503">Feeder</text>
+		<rect x="329.8" y="82.2" fill="none" width="59.4" height="9.2"/>
+		<text transform="matrix(1 0 0 1 344.3008 89.2666)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.1503">Feeder</text>
 		<g>
-			<rect x="272.5" y="43.2" fill="none" width="57.3" height="9.2"/>
-			<text transform="matrix(1 0 0 1 281.9297 50.2656)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.15">Copy Bed</text>
-			<rect x="272.5" y="43.2" fill="none" width="57.3" height="9.2"/>
-			<text transform="matrix(1 0 0 1 281.9297 50.2656)" font-family="'Norwester-Regular'" font-size="10.15">Copy Bed</text>
+			<rect x="271.5" y="82.2" fill="none" width="57.3" height="9.2"/>
+			<text transform="matrix(1 0 0 1 280.9297 89.2656)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.15">Copy Bed</text>
+			<rect x="271.5" y="82.2" fill="none" width="57.3" height="9.2"/>
+			<text transform="matrix(1 0 0 1 280.9297 89.2656)" font-family="'Norwester-Regular'" font-size="10.15">Copy Bed</text>
 		</g>
 	</g>
 	<g id="toggle-at-collate-yes_1_">
 		<g>
 			<g>
-				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M121.5,162.5c0-1.7-1.3-3-3-3H8.5c-1.7,0-3,1.3-3,3v9
-					c0,1.7,1.3,3,3,3h110c1.7,0,3-1.3,3-3V162.5z"/>
+				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M121.5,151.5c0-1.7-1.3-3-3-3H8.5c-1.7,0-3,1.3-3,3v9
+					c0,1.7,1.3,3,3,3h110c1.7,0,3-1.3,3-3V151.5z"/>
 			</g>
 			<g>
-				<path fill="#E6E6E6" d="M64,162c0-1.7-1.3-3-3-3H8c-1.7,0-3,1.3-3,3v9c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V162z"/>
-				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M64.5,162.5c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9
-					c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V162.5z"/>
+				<path fill="#E6E6E6" d="M64,151c0-1.7-1.3-3-3-3H8c-1.7,0-3,1.3-3,3v9c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V151z"/>
+				<path fill="none" stroke="#B3B3B3" stroke-miterlimit="10" d="M64.5,151.5c0-1.7-1.3-3-3-3h-53c-1.7,0-3,1.3-3,3v9
+					c0,1.7,1.3,3,3,3h53c1.7,0,3-1.3,3-3V151.5z"/>
 			</g>
 		</g>
-		<rect x="63.8" y="164.2" fill="none" width="59.4" height="9.2"/>
-		<text transform="matrix(1 0 0 1 88.2988 171.2666)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.1503">No</text>
+		<rect x="63.8" y="153.2" fill="none" width="59.4" height="9.2"/>
+		<text transform="matrix(1 0 0 1 88.2988 160.2666)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.1503">No</text>
 		<g>
-			<rect x="5.5" y="164.2" fill="none" width="57.3" height="9.2"/>
-			<text transform="matrix(1 0 0 1 26.2568 171.2666)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.1503">Yes</text>
-			<rect x="5.5" y="164.2" fill="none" width="57.3" height="9.2"/>
-			<text transform="matrix(1 0 0 1 26.2568 171.2666)" font-family="'Norwester-Regular'" font-size="10.1503">Yes</text>
+			<rect x="5.5" y="153.2" fill="none" width="57.3" height="9.2"/>
+			<text transform="matrix(1 0 0 1 26.2568 160.2666)" fill="#999999" font-family="'Norwester-Regular'" font-size="10.1503">Yes</text>
+			<rect x="5.5" y="153.2" fill="none" width="57.3" height="9.2"/>
+			<text transform="matrix(1 0 0 1 26.2568 160.2666)" font-family="'Norwester-Regular'" font-size="10.1503">Yes</text>
 		</g>
 	</g>
 </g>
 <g id="Hot_Spots">
-	<rect id="toggle-single-packet" x="8" y="16" opacity="0" fill="#FFFFFF" width="46" height="20"/>
-	<rect id="load-from" x="272" y="38" opacity="0" fill="#FFFFFF" width="117" height="15"/>
-	<rect id="button-2" x="281" y="82" opacity="0" fill="#FFFFFF" width="77" height="25"/>
-	<rect id="reset-all_1_" x="84" opacity="0" fill="#FFFFFF" width="48" height="16"/>
+	<rect id="toggle-single-packet" x="310" y="30" opacity="0" fill="#FFFFFF" width="74" height="32"/>
+	<rect id="load-from_2_" x="271" y="77" opacity="0" fill="#FFFFFF" width="117" height="15"/>
+	<rect id="button-2_1_" x="310" y="131" opacity="0" fill="#FFFFFF" width="77" height="25"/>
+	<rect id="reset-all_2_" opacity="0" fill="#FFFFFF" width="48" height="16"/>
 	<rect id="log-off" x="358" opacity="0" fill="#FFFFFF" width="39" height="16"/>
-	<rect id="button-1" x="283" y="111" opacity="0" fill="#FFFFFF" width="75" height="25"/>
-	<rect id="toggle-collate" x="5" y="159" opacity="0" fill="#FFFFFF" width="117" height="16"/>
-	<rect id="tray-down" x="4" y="48" opacity="0" fill="#FFFFFF" width="15" height="13"/>
-	<rect id="tray-up" x="101" y="48" opacity="0" fill="#FFFFFF" width="15" height="13"/>
-	<rect id="scale-down" x="4" y="76" opacity="0" fill="#FFFFFF" width="15" height="13"/>
-	<rect id="scale-up" x="101" y="76" opacity="0" fill="#FFFFFF" width="15" height="13"/>
-	<rect id="darkness-down" x="4" y="103" opacity="0" fill="#FFFFFF" width="15" height="13"/>
-	<rect id="darkness-up" x="101" y="103" opacity="0" fill="#FFFFFF" width="15" height="13"/>
-	<rect id="sides-down" x="4" y="131" opacity="0" fill="#FFFFFF" width="15" height="13"/>
-	<rect id="sides-up" x="101" y="131" opacity="0" fill="#FFFFFF" width="15" height="13"/>
-	<rect id="staple-down" x="4" y="186" opacity="0" fill="#FFFFFF" width="15" height="13"/>
-	<rect id="staple-up" x="101" y="186" opacity="0" fill="#FFFFFF" width="15" height="13"/>
+	<rect id="button-1_1_" x="312" y="160" opacity="0" fill="#FFFFFF" width="75" height="25"/>
+	<rect id="toggle-collate" x="5" y="148" opacity="0" fill="#FFFFFF" width="117" height="16"/>
+	<rect id="tray-down" x="4" y="37" opacity="0" fill="#FFFFFF" width="15" height="13"/>
+	<rect id="tray-up" x="101" y="37" opacity="0" fill="#FFFFFF" width="15" height="13"/>
+	<rect id="scale-down" x="4" y="65" opacity="0" fill="#FFFFFF" width="15" height="13"/>
+	<rect id="scale-up" x="101" y="65" opacity="0" fill="#FFFFFF" width="15" height="13"/>
+	<rect id="darkness-down" x="4" y="92" opacity="0" fill="#FFFFFF" width="15" height="13"/>
+	<rect id="darkness-up" x="101" y="92" opacity="0" fill="#FFFFFF" width="15" height="13"/>
+	<rect id="sides-down" x="4" y="120" opacity="0" fill="#FFFFFF" width="15" height="13"/>
+	<rect id="sides-up" x="101" y="120" opacity="0" fill="#FFFFFF" width="15" height="13"/>
+	<rect id="staple-down" x="4" y="175" opacity="0" fill="#FFFFFF" width="15" height="13"/>
+	<rect id="staple-up" x="101" y="175" opacity="0" fill="#FFFFFF" width="15" height="13"/>
 </g>
 </svg>
