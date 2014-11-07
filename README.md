@@ -1,5 +1,7 @@
 ## Introduction ##
-Based on Tom Germeau's article that opened my mind about prototyping using Adobe Illustrator (or any SVG editor): [How designers can create interactive prototypes with Illustrator](http://tomgermeau.com/2014/02/how-designers-can-create-interactive-prototypes-with-illustrator/)
+A small framework for turning a series of SVG files into a clickable prototype.
+
+[Example](http://jayliu50.github.io/prototype-with-svg)
 
 ## Features ##
 - Supports multiple svg "pages"
@@ -18,4 +20,6 @@ Based on Tom Germeau's article that opened my mind about prototyping using Adobe
 
 
 ## Acknowledgments ##
+Based on Tom Germeau's article that opened my mind about prototyping using Adobe Illustrator (or any SVG editor): [How designers can create interactive prototypes with Illustrator](http://tomgermeau.com/2014/02/how-designers-can-create-interactive-prototypes-with-illustrator/)
+
 Typeface used in example is [Norwester by Jamie Wilson](http://jamiewilson.io/norwester/)
