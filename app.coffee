@@ -43,6 +43,9 @@ inputCopies = (c) ->
 
   copies = 50 if copies > 50
 
+  setCopies copies
+
+setCopies = (copies) ->
   # copies = 1 if copies <= 0
   if copies == 0
     Prototype.mask 'button-1_1_'
@@ -60,7 +63,7 @@ refreshInputCopies = ->
 backCopies = ->
   copies = copies // 10
   # copies = 1 if copies <= 0
-  Prototype.setText 'text-copies-count', copies
+  setCopies copies
 
 toggleLoad = ->
   load = !load
@@ -76,8 +79,10 @@ toggleLoad = ->
 toggleMode = ->
   mode = !mode
   setMode mode
+  setSided 0
 
-setMode = (mode)->
+setMode = (m)->
+  mode = m
   if mode
     Prototype.show 'toggle-at-packet'
     Prototype.hide 'toggle-at-single'
@@ -178,13 +183,17 @@ adjustDarkness = (direction) ->
 setTimeRemaining = (t) ->
   timeRemaining = t
   if timeRemaining == 0
-    if !startTimer?
+    if startTimer?
       Prototype.setText 'text-time-remaining', 'Done!'
       clearInterval startTimer
       startTimer == null
       _.delay ( ->
         Prototype.clearText 'text-time-remaining'
+        Prototype.show 'text-start_1_'
+        Prototype.hide 'text-stop'
       ), 2000
+    else
+      Prototype.clearText 'text-time-remaining'
   else
     Prototype.setText 'text-time-remaining', "Seconds remaining: #{timeRemaining}"
 
@@ -237,7 +246,7 @@ startOrStopCopying = ->
     Prototype.show 'text-start_1_'
     Prototype.hide 'text-stop'
     clearInterval startTimer
-    startTimer == null
+    startTimer = null
   else
     return if copies == 0
     Prototype.show 'text-stop'
@@ -246,7 +255,40 @@ startOrStopCopying = ->
         setTimeRemaining(--timeRemaining)
       ), 1000
 
+sided = 0
+toggleSided = (direction)->
+  if direction
+    sided++
+  else
+    sided--
+
+  if mode # packet
+    sided = 0 if sided >= 4
+    sided = 3 if sided < 0
+  else
+    sided = 0 if sided >= 2
+    sided = 1 if sided < 0
+
+  setSided sided
+
+setSided = (sided) ->
+  if mode # packet
+    switch sided
+      when 0 then Prototype.setText 'text-sides', 'Single &dash; Single'
+      when 1 then Prototype.setText 'text-sides', 'Single &dash; Double'
+      when 2 then Prototype.setText 'text-sides', 'Double &dash; Single'
+      when 3 then Prototype.setText 'text-sides', 'Double &dash; Double'
+  else # single sheet
+    switch sided
+      when 0 then Prototype.setText 'text-sides', 'Single Sided'
+      when 1 then Prototype.setText 'text-sides', 'Double Sided'
+
 resetAll = ->
+
+  if startTimer
+    clearInterval startTimer
+    startTimer = null
+
   darkness = 0
   scale = 1
   tray = 0
@@ -259,14 +301,13 @@ resetAll = ->
   setSheetsRequired 0
   setStaple 0
   setPagesCached 0
+  setSided 0
 
   Prototype.setText 'text-darkness', 'Normal'
   Prototype.setText 'text-scale', '100%'
   Prototype.setText 'text-tray', 'Tray A 8.5 &times; 11'
   Prototype.clearText 'text-copies-count'
 
-  if startTimer
-    clearInterval startTimer
 
 resetAll()
 
@@ -335,6 +376,8 @@ setup =
         'reset-all_2_': -> resetAll()
         'staple-up': -> cycleStaple(true)
         'staple-down': -> cycleStaple(false)
+        'sides-up': -> toggleSided(true)
+        'sides-down': -> toggleSided(false)
         'button-2_1_': -> copyPage()
         'button-1_1_': -> startOrStopCopying()
 
