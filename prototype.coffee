@@ -62,3 +62,11 @@ class @Prototype
       return
 
   @currentState: null
+
+  @mask: (selector) ->
+      $("##{selector}").css 'color', 'white'
+      $("##{selector}").css 'opacity', 1
+
+  @unmask: (selector) ->
+      $("##{selector}").css 'color', null
+      $("##{selector}").css 'opacity', 0

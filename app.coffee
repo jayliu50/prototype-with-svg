@@ -42,12 +42,20 @@ inputCopies = (c) ->
     copies = copies * 10 + c
 
   copies = 50 if copies > 50
+
   # copies = 1 if copies <= 0
+  if copies == 0
+    Prototype.mask 'button-1_1_'
+  else
+    Prototype.unmask 'button-1_1_'
+
   Prototype.setText 'text-copies-count', copies
 
-  # todo: handle other case
-  setSheetsRequired copies
-  setTimeRemaining sheetsRequired * 2
+  refreshInputCopies()
+
+refreshInputCopies = ->
+  setSheetsRequired copies * (if pagesCached then pagesCached else 1)
+  setTimeRemaining sheetsRequired * 2 * (if pagesCached then pagesCached else 1)
 
 backCopies = ->
   copies = copies // 10
@@ -59,9 +67,11 @@ toggleLoad = ->
   if load
     Prototype.show 'toggle-at-feeder'
     Prototype.hide 'toggle-at-copybed'
+    Prototype.mask 'button-2_1_'
   else
     Prototype.hide 'toggle-at-feeder'
     Prototype.show 'toggle-at-copybed'
+    Prototype.unmask 'button-2_1_'
 
 toggleMode = ->
   mode = !mode
@@ -72,7 +82,6 @@ setMode = (mode)->
     Prototype.show 'toggle-at-packet'
     Prototype.hide 'toggle-at-single'
     Prototype.show 'Packet'
-    Prototype.hide 'text-start_1_'
 
     Prototype.show 'toggle-at-copybed'
     load = false
@@ -83,7 +92,6 @@ setMode = (mode)->
     Prototype.hide 'toggle-at-packet'
     Prototype.show 'toggle-at-single'
     Prototype.hide 'Packet'
-    Prototype.show 'text-start_1_'
 
     Prototype.hide 'toggle-at-feeder'
     Prototype.hide 'toggle-at-copybed'
@@ -170,7 +178,13 @@ adjustDarkness = (direction) ->
 setTimeRemaining = (t) ->
   timeRemaining = t
   if timeRemaining == 0
-    Prototype.clearText 'text-time-remaining'
+    if !startTimer?
+      Prototype.setText 'text-time-remaining', 'Done!'
+      clearInterval startTimer
+      startTimer == null
+      _.delay ( ->
+        Prototype.clearText 'text-time-remaining'
+      ), 2000
   else
     Prototype.setText 'text-time-remaining', "Seconds remaining: #{timeRemaining}"
 
@@ -201,6 +215,37 @@ setStaple = (mode) ->
     when 1 then Prototype.setText 'text-staple_2_', 'Yes: Portrait'
     when 2 then Prototype.setText 'text-staple_2_', 'Yes: Landscape'
 
+pagesCached = 0
+copyPage = ->
+  setPagesCached ++pagesCached
+
+setPagesCached = (pagesCached) ->
+  if pagesCached == 0
+    Prototype.mask 'button-1_1_'
+    Prototype.hide 'text-pages-copied'
+  else
+    Prototype.show 'text-pages-copied'
+    Prototype.unmask 'button-1_1_'
+
+  Prototype.setText 'text-pages-copied', "#{pagesCached} Pages Copied"
+
+  refreshInputCopies()
+
+startTimer = null
+startOrStopCopying = ->
+  if startTimer?
+    Prototype.show 'text-start_1_'
+    Prototype.hide 'text-stop'
+    clearInterval startTimer
+    startTimer == null
+  else
+    return if copies == 0
+    Prototype.show 'text-stop'
+    Prototype.hide 'text-start_1_'
+    startTimer = setInterval ( ->
+        setTimeRemaining(--timeRemaining)
+      ), 1000
+
 resetAll = ->
   darkness = 0
   scale = 1
@@ -210,16 +255,18 @@ resetAll = ->
   setMode mode
   load = false # copy bed
   copies = 0
-  timeRemaining = 0
-  setTimeRemaining()
-  sheetsRequired = 0
-  setSheetsRequired()
+  setTimeRemaining 0
+  setSheetsRequired 0
   setStaple 0
+  setPagesCached 0
 
   Prototype.setText 'text-darkness', 'Normal'
   Prototype.setText 'text-scale', '100%'
   Prototype.setText 'text-tray', 'Tray A 8.5 &times; 11'
   Prototype.clearText 'text-copies-count'
+
+  if startTimer
+    clearInterval startTimer
 
 resetAll()
 
@@ -255,6 +302,8 @@ setup =
         'toggle-at-feeder'
         'toggle-at-collate-yes_1_'
         'Packet'
+        'text-pages-copied'
+        'text-stop'
       ]
       clear:[
         'text-copies-count'
@@ -286,6 +335,8 @@ setup =
         'reset-all_2_': -> resetAll()
         'staple-up': -> cycleStaple(true)
         'staple-down': -> cycleStaple(false)
+        'button-2_1_': -> copyPage()
+        'button-1_1_': -> startOrStopCopying()
 
 
 proto = new Prototype(setup)

@@ -8,3 +8,5 @@ Based on Tom Germeau's article that opened my mind about prototyping using Adobe
 - It would be nice if there were some "headless" Javascript library that can automatically do some databinding.
 - Can't clear the text of what shows up in Illustrator as "multi-line" text fields, the ones that are a `<g>` wrapped around a `<rect>` and a `<text>`.
     + *Workaround*: You are better off just hiding the entire `<g>` rather than trying to clear it
+- Illustrator (CS5) does not export the text-anchor attribute, so dynamic text will usually have to be left-aligned to look good.
+-
