@@ -381,12 +381,15 @@
   resetAll();
 
   setup = {
-    initialState: 'main',
+    initialState: 'login',
     states: {
       login: {
         view: "Copy Machine Export-01.svg",
         hide: ['text-error-msg'],
         clear: ['text-code'],
+        hints: {
+          'numpad': 'Pssst! The access code is 1505'
+        },
         triggers: {
           num0_1_: function() {
             return inputCode('0');

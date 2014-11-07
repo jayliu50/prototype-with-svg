@@ -12,7 +12,7 @@ class @Prototype
     Prototype.gotoState initialState
 
   init = (state)->
-    {view, clear, hide, triggers, initialize} = state
+    {view, clear, hide, hints, triggers, initialize} = state
 
     _.each clear, (selector) ->
       Prototype.clearText selector
@@ -29,6 +29,13 @@ class @Prototype
 
     _.each hide, (selector) ->
       Prototype.hide selector
+
+    _.each hints, (value, key) ->
+      $('body').attr "title", value # todo: implement fully
+
+      # oops, svg doesn't support this, I don't think
+      # $("##{key}")
+      #   .attr 'title', value
 
     return
 

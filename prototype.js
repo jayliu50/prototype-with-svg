@@ -19,8 +19,8 @@
     }
 
     init = function(state) {
-      var initialize, view;
-      view = state.view, clear = state.clear, hide = state.hide, triggers = state.triggers, initialize = state.initialize;
+      var hints, initialize, view;
+      view = state.view, clear = state.clear, hide = state.hide, hints = state.hints, triggers = state.triggers, initialize = state.initialize;
       _.each(clear, function(selector) {
         return Prototype.clearText(selector);
       });
@@ -32,6 +32,9 @@
       });
       _.each(hide, function(selector) {
         return Prototype.hide(selector);
+      });
+      _.each(hints, function(value, key) {
+        return $('body').attr("title", value);
       });
     };
 

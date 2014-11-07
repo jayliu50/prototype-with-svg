@@ -312,8 +312,8 @@ resetAll = ->
 resetAll()
 
 setup =
-  # initialState: 'login'
-  initialState: 'main'
+  initialState: 'login'
+  # initialState: 'main'
 
   states:
     login:
@@ -324,6 +324,8 @@ setup =
       clear: [
         'text-code'
       ]
+      hints:
+        'numpad': 'Pssst! The access code is 1505'
       triggers:
         num0_1_: -> inputCode('0')
         num1_1_: -> inputCode('1')
