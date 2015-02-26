@@ -1,7 +1,7 @@
 ## Introduction ##
 A small framework for turning a series of SVG files into a clickable prototype.
 
-[Example](http://jayliu50.github.io/prototype-with-svg)
+[Example](http://jayliu50.github.io/prototype-with-svg). *Hint: the access code is 1505*
 
 ## Features ##
 - Supports multiple svg "pages"
