@@ -23,7 +23,7 @@ A small framework for turning a series of SVG files into a clickable prototype.
 - *Suggestion:* Create a new layer containing all the hotspots that floats above all your other visual elements, to ensure that they are the top-most layer.
 
 The following is a screenshot of what I have in Illustrator for the copy machine example given.
-![The Layers of my Adobe Illustrator file](jayliu50.github.com/prototype-with-svg/example/illustrator/layers.png).
+![The Layers of my Adobe Illustrator file](https://raw.githubusercontent.com/jayliu50/prototype-with-svg/master/example/illustrator/layers.png).
 
 
 ### Export ###
@@ -31,7 +31,7 @@ Choose Save a Copy -> Save as type SVG ->
 
 I export from Illustrator to SVG using these settings
 
-![Adobe Illustrator Export Settings](jayliu50.github.com/prototype-with-svg/readme-img/export-to-svg-settings.png)
+![Adobe Illustrator Export Settings](https://raw.githubusercontent.com/jayliu50/prototype-with-svg/master/readme-img/export-to-svg-settings.png)
 
 ## 2. Code ##
 
