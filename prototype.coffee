@@ -42,6 +42,12 @@ class @Prototype
   ###
   Static Methods
   ###
+
+  ###
+  # Sets the text of an element
+  # @param {string} selector CSS selector
+  # @param {string} text The new text to be displayed
+  ###
   @setText: (selector, text) ->
     text = '&nbsp' if !text? || text == "" # never let the string go to the empty string because the text will get reflowed
     element = $("##{selector}")[0]
