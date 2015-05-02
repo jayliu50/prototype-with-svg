@@ -6,43 +6,43 @@ class @Prototype
   clear = []
   hide = []
 
-  TEXTTOKEN = 'HTMLINPUT-TEXT'
-
   constructor: (setup) ->
     if setup?
       {initialState, states} = setup
       Prototype.gotoState initialState
 
-    prepareDom()
+    new prepareDom()
 
-  translateSvgAttributesToCss = (destination, source) ->
-    if source.attr 'width'
-      destination.css('width', "#{source.attr('width')}px")
-    if source.attr 'height'
-      destination.css('height', "#{source.attr('height')}px")
-    destination
+  class prepareDom
+    TEXTTOKEN = 'HTMLINPUT-TEXT'
+    translateSvgAttributesToCss = (destination, source) ->
+      if source.attr 'width'
+        destination.css('width', "#{source.attr('width')}px")
+      if source.attr 'height'
+        destination.css('height', "#{source.attr('height')}px")
+      destination
 
-  transferAllAttributes = (destination, source) ->
-    attributes = source.prop 'attributes'
-    _.each attributes, (value) ->
-      if value.name isnt 'id'
-        destination.attr value.name, value.value
+    transferAllAttributes = (destination, source) ->
+      attributes = source.prop 'attributes'
+      _.each attributes, (value) ->
+        if value.name isnt 'id'
+          destination.attr value.name, value.value
 
-  computeFontSize = (rectangle) ->
-    size = parseInt(rectangle.attr('height') * .6)
-    "#{size}pt"
+    computeFontSize = (rectangle) ->
+      size = parseInt(rectangle.attr('height') * .6)
+      "#{size}pt"
 
-  prepareDom = () ->
-    rectangles = $("rect[id^=#{TEXTTOKEN}]")
-    _.each rectangles, (rect) ->
-
-      rectangle = $(rect)
-
+    makeRectangle = (rectangle) ->
       foreignObject = $(document.createElementNS 'http://www.w3.org/2000/svg', 'foreignObject')
       transferAllAttributes foreignObject, rectangle
 
       foreignObject.append translateSvgAttributesToCss $("<textarea />").addClass('dynamic').attr('id', rectangle.attr('id').substring(TEXTTOKEN.length + 1)).css('font-size', computeFontSize(rectangle)), rectangle
-      rectangle.after foreignObject
+      foreignObject
+
+    rectangles = $("rect[id^=#{TEXTTOKEN}]")
+    _.each rectangles, (rect) ->
+      rectangle = $(rect)
+      rectangle.after makeRectangle(rectangle)
 
   init = (state)->
     {view, clear, hide, hints, triggers, initialize} = state
