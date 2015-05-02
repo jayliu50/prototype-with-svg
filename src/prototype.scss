@@ -1,0 +1,10 @@
+svg {
+  @include user-select(none);
+  -webkit-touch-callout: none;
+}
+
+.PROTO-dynamic {
+  border: none;
+  border-left: 3px solid transparent;
+  background: transparent;
+}

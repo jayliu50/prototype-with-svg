@@ -21,7 +21,7 @@ this.Prototype = (function() {
   }
 
   prepareDom = (function() {
-    var TEXTTOKEN, computeFontSize, groups, makeTextarea, rectangles, transferAllAttributes, translateSvgAttributesToCssText;
+    var TEXTTOKEN, computeFontSize, groups, makeTextInput, rectangles, transferAllAttributes, translateSvgAttributesToCssText;
 
     function prepareDom() {}
 
@@ -48,29 +48,29 @@ this.Prototype = (function() {
       return size + "pt";
     };
 
-    makeTextarea = function(rectangle, id, styleModel) {
-      var foreignObject, textarea;
+    makeTextInput = function(rectangle, id, styleModel) {
+      var foreignObject, textInput;
       foreignObject = $(document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject'));
       transferAllAttributes(foreignObject, rectangle);
-      textarea = $("<textarea />").addClass('PROTO-dynamic').css('font-size', computeFontSize(rectangle));
+      textInput = $("<input type='text' />").addClass('PROTO-dynamic').css('font-size', computeFontSize(rectangle));
       if (id != null) {
-        textarea.attr('id', id.substring(TEXTTOKEN.length + 1));
+        textInput.attr('id', id.substring(TEXTTOKEN.length + 1));
       }
       if (rectangle.attr('width')) {
-        textarea.css('width', (rectangle.attr('width')) + "px");
+        textInput.css('width', (rectangle.attr('width')) + "px");
       }
       if (rectangle.attr('height')) {
-        textarea.css('height', (rectangle.attr('height')) + "px");
+        textInput.css('height', (rectangle.attr('height')) + "px");
       }
       if (styleModel != null) {
         if (styleModel.attr('font-family')) {
-          textarea.css('font-family', "" + (styleModel.attr('font-family')));
+          textInput.css('font-family', "" + (styleModel.attr('font-family')));
         }
         if (styleModel.attr('font-size')) {
-          textarea.css('font-size', "" + (styleModel.attr('font-size')));
+          textInput.css('font-size', "" + (styleModel.attr('font-size')));
         }
       }
-      foreignObject.append(textarea);
+      foreignObject.append(textInput);
       return foreignObject;
     };
 
@@ -79,18 +79,18 @@ this.Prototype = (function() {
     _.each(rectangles, function(rect) {
       var rectangle;
       rectangle = $(rect);
-      return rectangle.after(makeTextarea(rectangle, rectangle.attr('id')));
+      return rectangle.after(makeTextInput(rectangle, rectangle.attr('id')));
     });
 
     groups = $("g[id^=" + TEXTTOKEN + "]");
 
     _.each(groups, function(group) {
-      var rectangle, text, textarea;
+      var rectangle, text, textInput;
       group = $(group);
       rectangle = group.find('rect');
       text = group.find('text');
-      textarea = makeTextarea(rectangle, group.attr('id'), text);
-      textarea.bind('keyup', function(event) {
+      textInput = makeTextInput(rectangle, group.attr('id'), text);
+      textInput.bind('keyup', function(event) {
         if (event.target.value.length) {
           return text.hide();
         } else {
@@ -98,7 +98,7 @@ this.Prototype = (function() {
         }
       });
       text.css('pointer-events', 'none');
-      return rectangle.after(textarea);
+      return rectangle.after(textInput);
     });
 
     return prepareDom;

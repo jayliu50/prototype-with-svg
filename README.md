@@ -1,7 +1,7 @@
 # Introduction #
 A small framework for turning a series of SVG files into a clickable prototype.
 
-Check out the full kitchen sink on [CodePen](http://codepen.io/cyanos/full/EjjvaL).
+Check out the full kitchen sink on [CodePen](http://codepen.io/cyanos/full/EjjvaL), to see what this library is capable of.
 
 [Example](http://jayliu50.github.io/prototype-with-svg). *Hint: the access code is 1505*
 
