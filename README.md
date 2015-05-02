@@ -36,7 +36,7 @@ The following is a screenshot of what I have in Illustrator for the copy machine
 Choose Save a Copy -> Save as type SVG -> I use [these settings](https://raw.githubusercontent.com/jayliu50/prototype-with-svg/master/readme-img/export-to-svg-settings.png)
 
 ## 2. Code ##
-See the `example` folder for [the source code (CoffeeScript)](blob/master/example/app.coffee) for the [copy machine prototype](http://jayliu50.github.io/prototype-with-svg).
+See the `example` folder for [the source code (CoffeeScript)](example/app.coffee) for the [copy machine prototype](http://jayliu50.github.io/prototype-with-svg).
 
 1. Import `prototype.js` and `prototype.css` from the `dist` folder into your project.
 2. Call `new Prototype(setup)` in your code. The optional parameter `setup` is an object containing two keys: `initialState` and `states` (see Configuration, below).
