@@ -1,6 +1,8 @@
 # Introduction #
 A small framework for turning a series of SVG files into a clickable prototype.
 
+Check out the full kitchen sink on [CodePen](http://codepen.io/cyanos/full/EjjvaL).
+
 [Example](http://jayliu50.github.io/prototype-with-svg). *Hint: the access code is 1505*
 
 # Features #
@@ -91,7 +93,7 @@ It's written in CoffeeScript, but you can refer to the Javascript output as well
 # Known Issues #
 - Illustrator (CS5) sometimes increments the ID numerically, appending `_1_` etc., without apparent reason, which is annoying.
     + *Workaround*: Use a visual diff tool to see exactly how your SVG has changed. If the IDs are different, update that in code.
-- Can sometimes click on something that is not meant to be displayed
+- Can sometimes click on something that is not meant to be displayed. I think this is because there are still events attached that should not be there.
 - It would be nice if there were some "headless" Javascript library that can automatically do some databinding.
 - Can't clear the text of what shows up in Illustrator as "multi-line" text fields, the ones that are a `<g>` wrapped around a `<rect>` and a `<text>`.
     + *Workaround*: You are better off just hiding the entire `<g>` rather than trying to clear it
@@ -99,7 +101,8 @@ It's written in CoffeeScript, but you can refer to the Javascript output as well
 
 # Next Steps #
 - Well, fix some of those known issues. They really suck.
-- Consideration of integrating other Javascript libraries into the mix for greater leverage and expressability.
+- Consideration of integrating other Javascript libraries (d3? angular? react? rivets?, snap.js?) into the mix for greater leverage and expressability.
+- Add unit testing
 
 # Acknowledgments #
 Based on Tom Germeau's article that opened my mind about prototyping using Adobe Illustrator (or any SVG editor): [How designers can create interactive prototypes with Illustrator](http://tomgermeau.com/2014/02/how-designers-can-create-interactive-prototypes-with-illustrator/)
