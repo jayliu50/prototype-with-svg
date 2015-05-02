@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+  "settings":
+      {
+          "CoffeeScript":
+          {
+              "noWrapper": true,
+              "compileOnSave": true,
+              "compileDir": "../dist"
+          }
+      }
+}
