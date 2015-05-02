@@ -21,19 +21,14 @@ this.Prototype = (function() {
   }
 
   prepareDom = (function() {
-    var TEXTTOKEN, computeFontSize, makeRectangle, rectangles, transferAllAttributes, translateSvgAttributesToCss;
+    var TEXTTOKEN, computeFontSize, groups, makeTextarea, rectangles, transferAllAttributes, translateSvgAttributesToCssText;
 
     function prepareDom() {}
 
     TEXTTOKEN = 'HTMLINPUT-TEXT';
 
-    translateSvgAttributesToCss = function(destination, source) {
-      if (source.attr('width')) {
-        destination.css('width', (source.attr('width')) + "px");
-      }
-      if (source.attr('height')) {
-        destination.css('height', (source.attr('height')) + "px");
-      }
+    translateSvgAttributesToCssText = function(destination, source) {
+      destination.attr('placeholder', source.text());
       return destination;
     };
 
@@ -53,11 +48,29 @@ this.Prototype = (function() {
       return size + "pt";
     };
 
-    makeRectangle = function(rectangle) {
-      var foreignObject;
+    makeTextarea = function(rectangle, id, styleModel) {
+      var foreignObject, textarea;
       foreignObject = $(document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject'));
       transferAllAttributes(foreignObject, rectangle);
-      foreignObject.append(translateSvgAttributesToCss($("<textarea />").addClass('dynamic').attr('id', rectangle.attr('id').substring(TEXTTOKEN.length + 1)).css('font-size', computeFontSize(rectangle)), rectangle));
+      textarea = $("<textarea />").addClass('PROTO-dynamic').css('font-size', computeFontSize(rectangle));
+      if (id != null) {
+        textarea.attr('id', id.substring(TEXTTOKEN.length + 1));
+      }
+      if (rectangle.attr('width')) {
+        textarea.css('width', (rectangle.attr('width')) + "px");
+      }
+      if (rectangle.attr('height')) {
+        textarea.css('height', (rectangle.attr('height')) + "px");
+      }
+      if (styleModel != null) {
+        if (styleModel.attr('font-family')) {
+          textarea.css('font-family', "" + (styleModel.attr('font-family')));
+        }
+        if (styleModel.attr('font-size')) {
+          textarea.css('font-size', "" + (styleModel.attr('font-size')));
+        }
+      }
+      foreignObject.append(textarea);
       return foreignObject;
     };
 
@@ -66,7 +79,26 @@ this.Prototype = (function() {
     _.each(rectangles, function(rect) {
       var rectangle;
       rectangle = $(rect);
-      return rectangle.after(makeRectangle(rectangle));
+      return rectangle.after(makeTextarea(rectangle, rectangle.attr('id')));
+    });
+
+    groups = $("g[id^=" + TEXTTOKEN + "]");
+
+    _.each(groups, function(group) {
+      var rectangle, text, textarea;
+      group = $(group);
+      rectangle = group.find('rect');
+      text = group.find('text');
+      textarea = makeTextarea(rectangle, group.attr('id'), text);
+      textarea.bind('keyup', function(event) {
+        if (event.target.value.length) {
+          return text.hide();
+        } else {
+          return text.show();
+        }
+      });
+      text.css('pointer-events', 'none');
+      return rectangle.after(textarea);
     });
 
     return prepareDom;

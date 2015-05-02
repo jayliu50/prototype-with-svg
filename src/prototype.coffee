@@ -15,11 +15,9 @@ class @Prototype
 
   class prepareDom
     TEXTTOKEN = 'HTMLINPUT-TEXT'
-    translateSvgAttributesToCss = (destination, source) ->
-      if source.attr 'width'
-        destination.css('width', "#{source.attr('width')}px")
-      if source.attr 'height'
-        destination.css('height', "#{source.attr('height')}px")
+
+    translateSvgAttributesToCssText = (destination, source) ->
+      destination.attr 'placeholder', source.text()
       destination
 
     transferAllAttributes = (destination, source) ->
@@ -32,17 +30,54 @@ class @Prototype
       size = parseInt(rectangle.attr('height') * .6)
       "#{size}pt"
 
-    makeRectangle = (rectangle) ->
+    makeTextarea = (rectangle, id, styleModel) ->
       foreignObject = $(document.createElementNS 'http://www.w3.org/2000/svg', 'foreignObject')
       transferAllAttributes foreignObject, rectangle
 
-      foreignObject.append translateSvgAttributesToCss $("<textarea />").addClass('dynamic').attr('id', rectangle.attr('id').substring(TEXTTOKEN.length + 1)).css('font-size', computeFontSize(rectangle)), rectangle
+      textarea = $("<textarea />")
+        .addClass 'PROTO-dynamic'
+        .css('font-size', computeFontSize rectangle )
+
+      textarea.attr('id', id.substring(TEXTTOKEN.length + 1)) if id?
+
+      # infer styles from prototype rect
+      if rectangle.attr 'width'
+        textarea.css 'width', "#{rectangle.attr 'width'}px"
+      if rectangle.attr 'height'
+        textarea.css 'height', "#{rectangle.attr 'height'}px"
+
+      # infer styles from placeholder text
+      # todo: full implementation of placeholder styling required
+      if styleModel?
+        if styleModel.attr 'font-family'
+          textarea.css 'font-family', "#{styleModel.attr 'font-family'}"
+        if styleModel.attr 'font-size'
+          textarea.css 'font-size', "#{styleModel.attr 'font-size'}"
+
+      foreignObject.append textarea
       foreignObject
 
     rectangles = $("rect[id^=#{TEXTTOKEN}]")
     _.each rectangles, (rect) ->
       rectangle = $(rect)
-      rectangle.after makeRectangle(rectangle)
+      rectangle.after makeTextarea rectangle, rectangle.attr 'id'
+
+    # handle text with placeholders
+    groups = $("g[id^=#{TEXTTOKEN}]")
+    _.each groups, (group) ->
+      group = $(group)
+      rectangle = group.find 'rect'
+      text = group.find 'text'
+      textarea = makeTextarea rectangle, group.attr('id'), text
+      textarea.bind 'keyup', (event) ->
+        if event.target.value.length
+          text.hide()
+        else
+          text.show()
+
+      text.css 'pointer-events', 'none'
+
+      rectangle.after textarea
 
   init = (state)->
     {view, clear, hide, hints, triggers, initialize} = state
