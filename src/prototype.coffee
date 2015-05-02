@@ -6,10 +6,29 @@ class @Prototype
   clear = []
   hide = []
 
+  TEXTTOKEN = 'HTMLINPUT-TEXT'
+
   constructor: (setup) ->
     {initialState, states} = setup
 
     Prototype.gotoState initialState
+
+  translateSvgAttributesToCss = (destination, source) ->
+    if source.attr 'width'
+      destination.css('width', "#{source.attr('width')}px")
+    if source.attr 'height'
+      destination.css('height', "#{source.attr('height')}px")
+    destination
+
+  transferAllAttributes = (destination, source) ->
+    attributes = source.prop 'attributes'
+    _.each attributes, (value) ->
+      if value.name isnt 'id'
+        destination.attr value.name, value.value
+
+  computeFontSize = (rectangle) ->
+    size = parseInt(rectangle.attr('height') * .6)
+    "#{size}pt"
 
   init = (state)->
     {view, clear, hide, hints, triggers, initialize} = state
@@ -36,6 +55,17 @@ class @Prototype
       # oops, svg doesn't support this, I don't think
       # $("##{key}")
       #   .attr 'title', value
+
+    rectangles = $("rect[id^=#{TEXTTOKEN}]")
+    _.each rectangles, (rect) ->
+
+      rectangle = $(rect)
+
+      foreignObject = $(document.createElementNS 'http://www.w3.org/2000/svg', 'foreignObject')
+      transferAllAttributes foreignObject, rectangle
+
+      foreignObject.append translateSvgAttributesToCss $("<textarea />").addClass('dynamic').attr('id', rectangle.attr('id').substring(TEXTTOKEN.length + 1)).css('font-size', computeFontSize(rectangle)), rectangle
+      rectangle.after foreignObject
 
     return
 
