@@ -83,7 +83,7 @@ this.Prototype = (function() {
   };
 
   Prototype.show = function(selector) {
-    return $("#" + selector).css('visibility', 'visible');
+    return $("#" + selector).css('visibility', 'visible').css('display', 'block');
   };
 
   Prototype.gotoState = function(state) {
@@ -117,9 +117,26 @@ this.Prototype = (function() {
 
     TEXTTOKEN = 'HTMLINPUT-TEXT';
 
-    function prepareDom(dom, font) {
-      var groups, rectangles;
-      new prepareStyles(font);
+    function prepareDom(svg, font) {
+      var groups, rectangles, stupidIdExp, stupidIds;
+      new prepareStyles(svg, font);
+      $('[id]').each(function() {
+        var ids;
+        ids = $('[id="' + this.id + '"]');
+        if (ids.length > 1 && ids[0] === this) {
+          console.warn('Multiple IDs #' + this.id);
+        }
+      });
+      stupidIds = $("*[id$='_']");
+      stupidIdExp = /([a-z0-9-]+)_[0-9]+_/ig;
+      _.each(stupidIds, function(id) {
+        var elem, match;
+        elem = $(id);
+        match = stupidIdExp.exec(elem.attr('id'));
+        if (match != null) {
+          elem.attr('id', match[1]);
+        }
+      });
       rectangles = $("rect[id^=" + TEXTTOKEN + "]");
       _.each(rectangles, function(rect) {
         var rectangle;
@@ -195,14 +212,14 @@ this.Prototype = (function() {
     prepareStyles = (function() {
       var replaceFonts;
 
-      function prepareStyles(font) {
+      function prepareStyles(svg, font) {
         var families, fontSizeExp, newStyle, styles, svgStyle, weights;
         families = font.families, weights = font.weights, styles = font.styles;
-        svgStyle = $('svg').find('style').text();
+        svgStyle = svg.find('style').text();
         fontSizeExp = /(font-size:\d+)/gi;
         newStyle = svgStyle.replace(fontSizeExp, '$1px');
         newStyle = replaceFonts(newStyle, families, weights, styles);
-        $('svg').find('style').text(newStyle);
+        svg.find('style').text(newStyle);
       }
 
       replaceFonts = function(stylesheet, families, weights, styles) {
@@ -213,9 +230,7 @@ this.Prototype = (function() {
           var fontFamily, match;
           match = fontFamilyExp.exec(rule);
           fontFamily = "";
-          console.log("|" + rule + "|");
           if (match) {
-            console.log(match);
             fontFamily = "font-family: " + families[match[1]] + ";";
             if (_.has(weights, match[2])) {
               fontFamily += "font-weight: " + match[2] + ";";

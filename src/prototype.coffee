@@ -14,7 +14,6 @@ class @Prototype
         setup.states =
           default:
             view: setup.view
-
       {initialState, states, font} = setup
       Prototype.gotoState initialState
 
@@ -71,7 +70,7 @@ class @Prototype
     $("##{selector}").css 'visibility', 'hidden'    # should probably check for existence first
 
   @show: (selector) ->
-    $("##{selector}").css 'visibility', 'visible'   # should probably check for existence first
+    $("##{selector}").css('visibility', 'visible').css('display', 'block')   # should probably check for existence first
 
   @gotoState: (state) ->
     $.get "#{states[state].view}", (data) ->
@@ -99,8 +98,28 @@ class @Prototype
   class prepareDom
     TEXTTOKEN = 'HTMLINPUT-TEXT'
 
-    constructor: (dom, font) ->
-      new prepareStyles(font)
+    constructor: (svg, font) ->
+      new prepareStyles(svg, font)
+
+      # Warning Duplicate IDs
+      $('[id]').each ->
+        ids = $('[id="' + @id + '"]')
+        if ids.length > 1 and ids[0] == this
+          console.warn 'Multiple IDs #' + @id
+        return
+
+      # fix the stupid illustrator's tendency to add _#_
+      stupidIds = $("*[id$='_']")
+      stupidIdExp = /([a-z0-9-]+)_[0-9]+_/ig
+      _.each stupidIds, (id) ->
+        elem = $(id)
+
+        match = stupidIdExp.exec elem.attr 'id'
+        if match?
+          elem.attr 'id', match[1]
+
+        return
+
       rectangles = $("rect[id^=#{TEXTTOKEN}]")
       _.each rectangles, (rect) ->
         rectangle = $(rect)
@@ -166,17 +185,17 @@ class @Prototype
       foreignObject
 
     class prepareStyles
-      constructor: (font) ->
+      constructor: (svg, font) ->
         {families, weights, styles} = font
 
         # css processing (because silly Illustrator doesn't know how to write <style> elements properly)
-        svgStyle = $('svg').find('style').text()
+        svgStyle = svg.find('style').text()
         fontSizeExp = /(font-size:\d+)/gi
         newStyle = svgStyle.replace fontSizeExp, '$1px'
 
         newStyle = replaceFonts newStyle, families, weights, styles
 
-        $('svg').find('style').text newStyle
+        svg.find('style').text newStyle
 
       replaceFonts = (stylesheet, families, weights, styles) ->
         rules = _.without (stylesheet.split '\n'), ''
@@ -184,9 +203,7 @@ class @Prototype
         rules = _.map rules, (rule) ->
           match = fontFamilyExp.exec rule
           fontFamily = ""
-          console.log "|#{rule}|"
           if match
-            console.log match
             # replace font name
             fontFamily = """font-family: #{families[match[1]]};"""
             if _.has weights, match[2]
