@@ -1,7 +1,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 svg {
@@ -10,10 +9,9 @@ svg {
   -webkit-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
 }
 

@@ -6,6 +6,7 @@ class @Prototype
   triggers = null
   clear = []
   hide = []
+  customInit = null
 
   constructor: (setup) ->
     if setup?
@@ -17,6 +18,8 @@ class @Prototype
       {initialState, states, font} = setup
       Prototype.gotoState initialState
 
+      customInit = setup.init
+
   init = (state)->
     {view, clear, hide, hints, triggers, initialize} = state
 
@@ -26,7 +29,7 @@ class @Prototype
     _.each initialize, (text, selector) ->
       Prototype.setText selector, text
 
-    _.each triggers, (value, key) ->
+    _.each triggers.click, (value, key) ->
       # todo: should probably check to see that each value is a function
       $("##{key}")
         .on "click", value
@@ -66,9 +69,13 @@ class @Prototype
   @clearText = (selector) ->
     Prototype.setText selector, ''
 
+  # todo: implement support for params list or fluent syntax
+  # todo: implement recursive?
   @hide: (selector) ->
     $("##{selector}").css 'visibility', 'hidden'    # should probably check for existence first
 
+  # todo: implement support for params list or fluent syntax
+  # todo: implement recursive?
   @show: (selector) ->
     $("##{selector}").css('visibility', 'visible').css('display', 'block')   # should probably check for existence first
 
@@ -78,6 +85,7 @@ class @Prototype
       new prepareDom($('svg'), font)
       init(states[state])
       Prototype.currentState = state
+      customInit() if customInit?
       return
 
   @currentState: null
@@ -90,6 +98,9 @@ class @Prototype
       $("##{selector}").css 'color', null
       $("##{selector}").css 'opacity', 0
 
+  @listIds: () ->
+    _.map $('*[id]'), (elem) ->
+      return $(elem).attr 'id'
 
   ###
   Helper Classes
@@ -109,6 +120,7 @@ class @Prototype
         return
 
       # fix the stupid illustrator's tendency to add _#_
+      # todo: should probably still check for id collision though
       stupidIds = $("*[id$='_']")
       stupidIdExp = /([a-z0-9-]+)_[0-9]+_/ig
       _.each stupidIds, (id) ->
@@ -132,7 +144,7 @@ class @Prototype
         rectangle = group.find 'rect'
         text = group.find 'text'
         textInput = makeTextInput rectangle, group.attr('id'), text
-        textInput.bind 'keyup', (event) ->
+        textInput.on 'input', (event) ->
           if event.target.value.length
             text.hide()
           else
@@ -172,6 +184,9 @@ class @Prototype
         textInput.css 'width', "#{rectangle.attr 'width'}px"
       if rectangle.attr 'height'
         textInput.css 'height', "#{rectangle.attr 'height'}px"
+      # todo: also infer how much padding should be put in, based on the positioning of the text
+
+      # todo: implement the creation of values instead of placeholder text
 
       # infer styles from placeholder text
       # todo: full implementation of placeholder styling required
@@ -190,7 +205,7 @@ class @Prototype
 
         # css processing (because silly Illustrator doesn't know how to write <style> elements properly)
         svgStyle = svg.find('style').text()
-        fontSizeExp = /(font-size:\d+)/gi
+        fontSizeExp = /(font-size:[\d\.]+)/gi
         newStyle = svgStyle.replace fontSizeExp, '$1px'
 
         newStyle = replaceFonts newStyle, families, weights, styles

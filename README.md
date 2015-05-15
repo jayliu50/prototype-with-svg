@@ -88,8 +88,8 @@ You will need some sort of HTTP server to see your prototype in action. I person
 It's written in CoffeeScript, but you can refer to the Javascript output as well.
 
 # Known Issues #
-- Illustrator (CS5) sometimes increments the ID numerically, appending `_1_` etc., without apparent reason, which is annoying.
-    + *Workaround*: Use a visual diff tool to see exactly how your SVG has changed. If the IDs are different, update that in code.
+- Clipping paths generally will not give you the result you want, unfortunately, unless you add the Rasterize Appearance (Effect -> Rasterize) to the object. Alternatively, you can try performing a Crop in the Pathfinder, or Expanding the object.
+- Illustrator (CS5) sometimes increments the ID numerically, appending `_1_` etc., without apparent reason, which is annoying. This is resolved in code, so please do not include the pattern `_#_` in your mockup.
 - Can sometimes click on something that is not meant to be displayed. I think this is because there are still events attached that should not be there.
 - It would be nice if there were some "headless" Javascript library that can automatically do some databinding.
 - Can't yet clear the text of what shows up in Illustrator as "multi-line" text fields, the ones that are a `<g>` wrapped around a `<rect>` and a `<text>`.
