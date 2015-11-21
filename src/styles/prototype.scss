@@ -1,0 +1,23 @@
+@import "compass";
+
+html, body {
+  margin:0;
+  padding:0;
+  // overflow:hidden;
+}
+
+svg {
+  @include user-select(none);
+  -webkit-touch-callout: none;
+  position: absolute;
+  top:0;
+  left:0;
+  // height:100%;
+  width:100%;
+}
+
+.PROTO-dynamic {
+  border: none;
+  border-left: 3px solid transparent;
+  background: transparent;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "prototype-with-svg",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jayliu50/prototype-with-svg",
+  "authors": [
+    "Jay Liu <jayliu50@gmail.com>"
+  ],
+  "description": "Library that turns SVG files into an interactive prototype",
+  "main": "dist/prototype.js",
+  "keywords": [
+    "prototype",
+    "svg"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.8.0",
+    "snap.svg": "~0.4.1",
+    "jquery": "~2.1.4"
+  }
+}

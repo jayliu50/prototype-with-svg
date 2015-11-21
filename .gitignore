@@ -1,2 +1,6 @@
 *.sublime-workspace
 Thumbs.db
+bower_components
+*.log
+tmp
+node_modules

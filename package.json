@@ -1,0 +1,43 @@
+{
+  "name": "prototype-with-svg",
+  "version": "1.0.0",
+  "description": "Library that turns SVG files into an interactive prototype",
+  "main": "dist/prototype.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "bower-update": "0.1.0",
+    "broccoli": "^0.16.2",
+    "broccoli-bower": "~0.2.1",
+    "broccoli-coffee": "~0.4.1",
+    "broccoli-compass": "0.2.4",
+    "broccoli-concat": "0.0.13",
+    "broccoli-file-remover": "^0.3.1",
+    "broccoli-merge-trees": "~0.2.1",
+    "broccoli-sass": "~0.6.6",
+    "broccoli-static-compiler": "~0.2.1",
+    "broccoli-template": "~0.1.1",
+    "broccoli-uglify-js": "~0.1.3",
+    "npm-check-updates": "^1.5.1"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jayliu50/prototype-with-svg.git"
+  },
+  "keywords": [
+    "prototype",
+    "svg"
+  ],
+  "author": "Jay Liu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jayliu50/prototype-with-svg/issues"
+  },
+  "homepage": "https://github.com/jayliu50/prototype-with-svg"
+}

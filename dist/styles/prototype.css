@@ -1,8 +1,10 @@
+/* line 3, ../prototype.scss */
 html, body {
   margin: 0;
   padding: 0;
 }
 
+/* line 9, ../prototype.scss */
 svg {
   -moz-user-select: -moz-none;
   -ms-user-select: none;
@@ -15,6 +17,7 @@ svg {
   width: 100%;
 }
 
+/* line 19, ../prototype.scss */
 .PROTO-dynamic {
   border: none;
   border-left: 3px solid transparent;
